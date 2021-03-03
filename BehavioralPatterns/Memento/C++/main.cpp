@@ -147,15 +147,10 @@ public:
     }
     void ShowHistory() const{
         std::cout << "Caretaker: Here's the list of mementos:\n";
-        // for (Memento *memento : this->mementos_)
-        // {
-            
-        // }
-        for (int i = 0; i < this->mementos_.size(); i++)
+        for (Memento *memento : this->mementos_)
         {
-            std::cout << this->mementos_.at(i)->GetName() << "\n";
-        }
-        
+            std::cout << memento->GetName() << "\n";    
+        }        
     }
 };
 
@@ -184,6 +179,6 @@ int main()
 
     delete originator;
     delete caretaker;
-
+    
     return 0;
 }
